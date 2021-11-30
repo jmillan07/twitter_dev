@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import {TweeterList} from './Components/TweeterList'
+import {Tweeter} from './Components/Tweeter'
+import {Register} from './Components/Register'
+import SignIn from './Components/SingIn'
+import Signout from './Components/SingOut'
+import { userContext } from './context/userProvider'
+import React from 'react';
+
 
 function App() {
+  const {user} = React.useContext(userContext)
+  console.log(!!user)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+           {user?(<>
+           <Signout/>
+           <h1>Beinvenido al Twitter DEV</h1>
+           <Register />
+           <Tweeter />
+           <TweeterList />
+           </>): <SignIn/>}
+         </div>
   );
 }
 
 export default App;
+
+
+// function App() {
+//   //const user = userContext(userContext)
+//   return (
+//     <div>
+//       {user?(<>
+//       <Signout/>
+//       <h1>Beinvenido al Twitter DEV</h1>
+//       <Register />
+//       <Tweeter />
+//       <TweeterList />
+//       </>): <SignIn/>}
+//     </div>
+//   );
+// }
+
