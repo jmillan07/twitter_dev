@@ -1,0 +1,14 @@
+.contedenorPre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 650px;
+    height: 650px;
+}
+
+.sigIn {
+    display: flex;
+    flex-direction: column;
+}
