@@ -10,6 +10,7 @@ const SignIn = ()=>
  {
      const navegate = useNavigate()
      const {setUser} = useContext(userContext)
+     
      const handleClick= async ()=>{
          const user= await signIn()
          navegate("/present")
@@ -18,9 +19,7 @@ const SignIn = ()=>
      }
     return (
         <>
-    {/* <Link to='/present'>
-    </Link> */}
-        <button onClick={handleClick}>Sign In with Google</button>
+            <button onClick={handleClick}>Sign In with Google</button>
     </>
     )
  }   

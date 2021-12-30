@@ -1,4 +1,3 @@
-//import {createUser, singIn, singOut} from "../Services/Auth"
 import { useInput } from '../Services/hooks/useInput'
 
 export function Register(){
@@ -7,8 +6,8 @@ export function Register(){
     const [password, handlePassword] = useInput("")
     const [userState, setUserstate] = useInput(null)
 
-    console.log(email)
-    console.log(password)
+    //console.log(email)
+    //console.log(password)
 
     const logIn = async ()=>{
         //const user = await singIn(email,password)
@@ -16,7 +15,7 @@ export function Register(){
     }
     
     const crearUsuario = async()=>{
-        console.log("pase")
+       // console.log("pase")
     //const user = await createUser(email, password)
     //console.log(user)
     //setUserstate(user)

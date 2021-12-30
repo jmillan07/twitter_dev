@@ -1,15 +1,32 @@
 import { Auth } from "./FirebasesConfig"
-//import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
-
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut as _signout } from "firebase/auth"
+import {setDocument,getDataById, addDataU, getDocRef} from './Operation'
+import { getDoc, setDoc } from 'firebase/firestore'
 
 const provider = new GoogleAuthProvider()
+
+const addUserToFirestore = async (user) => {
+  //const { id, displayName, email, photoURL } = user;
+  //console.log(user)
+  //console.log(user.user.uid, user.user.displayName, user.user.email, user.user.photoURL)  
+    //const userExist = await getDataById("users", id);
+    const docRef = await getDocRef("users", user.user.uid)
+    const userStapshop = await getDoc(docRef)
+    const userExist = !!userStapshop.data();
+    if (!userExist) {
+      await setDoc(docRef, {
+        name: user.user.displayName,
+        email: user.user.email,
+        photo: user.user.photoURL,
+      });
+    }
+  };
 
 export const signIn = async ()=>{
     try{
 
         const userCredentials = await signInWithPopup(Auth,provider)
-        //console.log(userCredentials.user)
+        await addUserToFirestore(userCredentials);
         return userCredentials.user
     }
     catch(err) {
@@ -30,38 +47,3 @@ export const handleOutChange = async (callback)=>{
     const unSubscribe = await onAuthStateChanged(Auth,callback)
     return unSubscribe
 }
-
-/////////la manera tradicional con usuario y contraseña
-/*
-export const createUser = async (email, pass) =>{
-try{
-const userData = await createUserWithEmailAndPassword(Auth,email,pass)
-console.log(userData)
-return userData.user
-}
-catch(err) {
-console.log(err)
-}
-}
-
-export const singIn = async (email, pass) =>{
-    try{
-    const userData = await signInWithEmailAndPassword (Auth,email,pass)
-    return userData.user
-    }
-    catch(err) {
-    console.log(err)
-    }
-    }
-
-    export const singOut = async () =>{
-        try{
-        await signOut(Auth)
-        
-        }
-        catch(err) {
-        console.log(err)
-        }
-        }
-    */
-

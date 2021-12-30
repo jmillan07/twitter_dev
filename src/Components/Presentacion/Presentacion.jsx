@@ -1,7 +1,5 @@
-//import logo from 'Utilites/logo.svg'
-//import { ReactComponent as BigLogo } from '../Utilites/logo.svg';
 import { ReactComponent as BigLogo } from '../../Utilites/logo.svg'
-import SignIn from '../SingIn';
+import SingIn from '../SingIn'
 import './Presen.css';
 
 export default function Presentacion (){
@@ -13,7 +11,7 @@ export default function Presentacion (){
             <div className='sigIn'>
                 <h1>LOREN IPSUN DOLOR</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <SignIn/>
+                <SingIn/>
             </div>
         </div>
     )
