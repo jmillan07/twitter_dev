@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/twitter_dev/static/css/main.f701b77c.chunk.css",
-    "main.js": "/twitter_dev/static/js/main.23f3435f.chunk.js",
-    "main.js.map": "/twitter_dev/static/js/main.23f3435f.chunk.js.map",
-    "runtime-main.js": "/twitter_dev/static/js/runtime-main.d748545d.js",
-    "runtime-main.js.map": "/twitter_dev/static/js/runtime-main.d748545d.js.map",
-    "static/js/2.821cd776.chunk.js": "/twitter_dev/static/js/2.821cd776.chunk.js",
-    "static/js/2.821cd776.chunk.js.map": "/twitter_dev/static/js/2.821cd776.chunk.js.map",
-    "static/js/3.32d9a813.chunk.js": "/twitter_dev/static/js/3.32d9a813.chunk.js",
-    "static/js/3.32d9a813.chunk.js.map": "/twitter_dev/static/js/3.32d9a813.chunk.js.map",
-    "index.html": "/twitter_dev/index.html",
-    "static/css/main.f701b77c.chunk.css.map": "/twitter_dev/static/css/main.f701b77c.chunk.css.map",
-    "static/js/2.821cd776.chunk.js.LICENSE.txt": "/twitter_dev/static/js/2.821cd776.chunk.js.LICENSE.txt",
-    "static/media/logo.e2dbe486.svg": "/twitter_dev/static/media/logo.e2dbe486.svg",
-    "static/media/logo_mini.98140e55.svg": "/twitter_dev/static/media/logo_mini.98140e55.svg"
+    "main.css": "/static/css/main.77307a13.chunk.css",
+    "main.js": "/static/js/main.4dd2eb86.chunk.js",
+    "main.js.map": "/static/js/main.4dd2eb86.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.49fe8b0b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.49fe8b0b.js.map",
+    "static/js/2.13c352ec.chunk.js": "/static/js/2.13c352ec.chunk.js",
+    "static/js/2.13c352ec.chunk.js.map": "/static/js/2.13c352ec.chunk.js.map",
+    "static/js/3.32d9a813.chunk.js": "/static/js/3.32d9a813.chunk.js",
+    "static/js/3.32d9a813.chunk.js.map": "/static/js/3.32d9a813.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.77307a13.chunk.css.map": "/static/css/main.77307a13.chunk.css.map",
+    "static/js/2.13c352ec.chunk.js.LICENSE.txt": "/static/js/2.13c352ec.chunk.js.LICENSE.txt",
+    "static/media/Google__G__Logo.66ae25be.svg": "/static/media/Google__G__Logo.66ae25be.svg",
+    "static/media/logo.e2dbe486.svg": "/static/media/logo.e2dbe486.svg",
+    "static/media/logo_mini.98140e55.svg": "/static/media/logo_mini.98140e55.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d748545d.js",
-    "static/js/2.821cd776.chunk.js",
-    "static/css/main.f701b77c.chunk.css",
-    "static/js/main.23f3435f.chunk.js"
+    "static/js/runtime-main.49fe8b0b.js",
+    "static/js/2.13c352ec.chunk.js",
+    "static/css/main.77307a13.chunk.css",
+    "static/js/main.4dd2eb86.chunk.js"
   ]
 }
