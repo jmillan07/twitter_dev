@@ -103,7 +103,7 @@
     
 }
 
-.cajaTwitter{
+.cajaTwitterLectura{
     font-family: 'Fira Code', monospace;
     font-size: 13px;
     font-style: normal;
@@ -111,6 +111,10 @@
     line-height: 24px;
     letter-spacing: -0.3333333432674408px;
     text-align: left;
+    display: flex;
+    width: 300px;
+    overflow: hidden;
+    height: 100px;
 }
 
 .butonElimina {
@@ -118,3 +122,17 @@
     border: none;
     cursor: pointer;
 }
+
+.progress-wrapper {
+    background-color: gray;
+    width: 300px;
+    height: 5px;
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #00DA76;
+    height: 5px;
+    border-radius: 10px;
+  }
+  

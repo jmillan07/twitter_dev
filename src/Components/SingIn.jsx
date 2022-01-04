@@ -1,9 +1,10 @@
 import {signIn} from '../Services/auth'
 import { useContext } from 'react'
 import { userContext } from '../context/userProvider'
+import { ReactComponent as GoogleLogo } from '../Utilites/Google__G__Logo.svg'
 //import { Link, useHistory } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+//import './siging.css';
 
 
 const SignIn = ()=>
@@ -19,7 +20,10 @@ const SignIn = ()=>
      }
     return (
         <>
-            <button onClick={handleClick}>Sign In with Google</button>
+        <div className='sigInGo'>
+            <GoogleLogo/>
+            <button className='buttonGo' onClick={handleClick}>Sign In with Google</button>
+        </div>
     </>
     )
  }   

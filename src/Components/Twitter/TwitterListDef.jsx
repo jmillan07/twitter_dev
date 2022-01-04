@@ -6,9 +6,9 @@ export const Tweet = ({tweet})=>{
     
     const [voto, setVoto] = useState(false)
 
-    // useEffect(()=>{
-    //     console.log("esto renderizandome")
-    // },[voto])
+     useEffect(()=>{
+         console.log(tweet.likes, tweet.users)
+     },[tweet])
 
     // La fecha 
     function fechaCompleta(fecha) {
@@ -48,11 +48,11 @@ export const Tweet = ({tweet})=>{
         const saber = await getDataById("tweets_dev", tweet.id)
 
         const pasar = saber.userLikes.split(",");
-        console.log(pasar)
+        //console.log(pasar)
         const pasa = pasar.includes(user.email);
         const elimina = pasar.indexOf(user.email)
         const result = pasar.splice(elimina, 1);
-        console.log(result)
+        //console.log(result)
         const result2 = pasar.join(",")
         if (pasa){
             await updateData("tweets_dev", tweet.id, { likes: tweet.likes - 1 , userLikes: result2})
@@ -75,20 +75,28 @@ export const Tweet = ({tweet})=>{
             
         </div>
         <p>{tweet.correo}</p>
-        <p className="cajaTwitter">{tweet.tweet}</p>
+        <p className="cajaTwitterLectura">{tweet.tweet}</p>
         {
             user.uid === tweet.uid ? (<button className="butonElimina" onClick={handleElimina} ><i class="fas fa-trash-alt"></i></button>): null
         }
         {/* <button onClick={handleLike}>Like {tweet.likes ? `(${tweet.likes})` : ""}</button> */}
         {/* <button className="butonElimina" onClick={handleLike}> <i class="far fa-heart"></i> {tweet.likes ? `(${tweet.likes})` : ""}</button> */}
-        <button className="butonElimina" onClick={handleLike}> {tweet.likes > 0 ? <><i class="fas fa-heart"></i>{tweet.likes}</> : <><i class="far fa-heart"></i></>}</button>
-        
-    
-
-        
-
+        {/* <button className="butonElimina" onClick={handleLike}> {tweet.likes > 0 ? <><i class="fas fa-heart"></i>{tweet.likes}</> : <><i class="far fa-heart"></i></>}</button> */}
+        <button className="butonElimina" onClick={handleLike}> 
+            <Corazon isFill={tweet.likes}/>
+            {tweet.likes}
+        </button>
 
     </div>
 </div>
 )
 }
+
+
+const Corazon =({isFill})=>{
+if (isFill){
+    return <i class="fas fa-heart"></i>
+}else {
+    return <i class="far fa-heart"></i>
+}
+} 
