@@ -32,7 +32,8 @@
 }
 
 .cajaTwitter{
-    width: 100%;
+    /* width: 100%; */
+    width: 300px;
     height: 100px;
     color: white;
     border: none;
@@ -41,7 +42,7 @@
 
 .contenedorTwitter{
     display: flex;
-    width: 550px;
+    /* width: 550px; */
     background-color: #150714;
   
 }
@@ -128,6 +129,7 @@
     width: 300px;
     height: 5px;
     border-radius: 10px;
+    margin: 0 0 0 35px;
   }
   
   .progress-bar {
