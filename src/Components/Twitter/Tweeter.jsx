@@ -40,8 +40,6 @@ export const Tweeter = () =>{
         clearInput()
     }
 
-    
-
     }
 
     return (

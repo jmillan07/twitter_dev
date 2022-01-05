@@ -7,25 +7,12 @@ export const Tweet = ({tweet})=>{
     const [voto, setVoto] = useState(false)
 
      useEffect(()=>{
-         console.log(tweet.likes, tweet.users)
+         //console.log(tweet.likes, tweet.users)
      },[tweet])
 
     // La fecha 
     function fechaCompleta(fecha) {
-        const MESES = [
-          "ene",
-          "feb",
-          "mar",
-          "abr",
-          "may",
-          "jun",
-          "jul",
-          "ago",
-          "sep",
-          "oct",
-          "nov",
-          "dic"
-        ];
+        const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
         const f = new Date(fecha);
     
         return (
@@ -72,7 +59,6 @@ export const Tweet = ({tweet})=>{
         <div className="userName">
             <h4>{tweet.users}</h4>
             <p>{fechaCompleta(tweet.date)}</p>
-            
         </div>
         <p>{tweet.correo}</p>
         <p className="cajaTwitterLectura">{tweet.tweet}</p>
@@ -86,7 +72,6 @@ export const Tweet = ({tweet})=>{
             <Corazon isFill={tweet.likes}/>
             {tweet.likes}
         </button>
-
     </div>
 </div>
 )
