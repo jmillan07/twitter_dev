@@ -21,7 +21,7 @@ const SignIn = ()=>
     return (
         <>
         <div className='sigInGo'>
-            <GoogleLogo/>
+            <GoogleLogo className='prueba'/>
             <button className='buttonGo' onClick={handleClick}>Sign In with Google</button>
         </div>
     </>

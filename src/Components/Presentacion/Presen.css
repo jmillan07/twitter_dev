@@ -1,3 +1,4 @@
+
 .contedenorPre {
     display: flex;
     align-items: center;
@@ -10,13 +11,23 @@
 }
 
 .sigIn {
+    
     display: flex;
     flex-direction: column;
+    width: 400px;
 }
 
+.prueba{
+background: white;
+margin: 0;
+}
 .sigInGo {
     display: flex;
-    background: white;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 10px;
+    width: 200px;
+    height: 25px;
 
 }
 
@@ -24,6 +35,8 @@
     border: none;
     cursor: pointer;
     background: #4285F4;
+    height: 24px;
+    margin-left: 0;
 }
 .contenedor-color {
     width: 500px;
