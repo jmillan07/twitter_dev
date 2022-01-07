@@ -9,7 +9,7 @@ export const Tweet = ({tweet})=>{
      useEffect(()=>{
          //console.log(tweet.likes, tweet.users)
      },[tweet])
-
+     
     // La fecha 
     function fechaCompleta(fecha) {
         const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
@@ -26,6 +26,9 @@ export const Tweet = ({tweet})=>{
 
     const {user} = useContext(userContext)
 
+    
+    
+    
     const handleElimina =()=>{
         //console.log(tweet.id)
         if (window.confirm('¿Estas seguro de Eliminar el Twitte?')) deleteData("tweets_dev",tweet.id)
@@ -57,7 +60,8 @@ export const Tweet = ({tweet})=>{
     </div>
     <div className="containerB">
         <div className="userName">
-            <h4>{tweet.users}</h4>
+            {/* <h4 className="fondoUser rojo">{tweet.users}</h4> */}
+            <h4 className={`fondoUser ${tweet.color}`} >{tweet.users}</h4>
             <p>{fechaCompleta(tweet.date)}</p>
         </div>
         <p>{tweet.correo}</p>

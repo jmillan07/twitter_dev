@@ -137,4 +137,30 @@
     height: 5px;
     border-radius: 10px;
   }
+  .fondoUser{
+      margin: 0;
+  }
   
+  .fondoUser.rojo{
+      background: #F50D5A;
+  }
+
+  .fondoUser.naranja{
+    background: #FF865C;
+  }
+
+  .fondoUser.amarillo{
+    background: #FFEA5C;
+  }
+
+  .fondoUser.verde{
+    background: #00DA76;
+  }
+
+  .fondoUser.azul{
+    background: #0096CE;
+  }
+
+  .fondoUser.morado{
+    background: #800FFF;
+  }

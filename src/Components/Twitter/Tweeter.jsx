@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useInput } from '../../Services/hooks/useInput'
 import { useState } from 'react'
-import { addData } from '../../Services/Operation'
+import { addData, getDataById } from '../../Services/Operation'
 import { ReactComponent as BigLogo } from '../../Utilites/logo_mini.svg'
 import { userContext } from '../../context/userProvider'
 import './Style.css';
@@ -22,7 +22,14 @@ export const Tweeter = () =>{
     const {user} = useContext(userContext)
     //console.log("esto es aqui javi", user.displayName)
 
-    const handleSetdata =() =>{
+    const handleSetdata = async () =>{
+        
+            const _user = await getDataById("users", user.uid)
+            const _userColor = _user.color
+        
+
+         console.log(_userColor)
+
         if(twetter.length>200){
             alert("El mensaje tiene mas de 200 catacteres")
         }else{
@@ -34,6 +41,7 @@ export const Tweeter = () =>{
             uid: user.uid,
             photo: user.photoURL,
             date: Date.now(),
+            color : _userColor,
             userLikes : null+","
         }
         addData("tweets_dev",devtwee)
