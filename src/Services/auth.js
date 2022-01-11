@@ -1,15 +1,12 @@
 import { Auth } from "./FirebasesConfig"
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut as _signout } from "firebase/auth"
-import {setDocument,getDataById, addDataU, getDocRef} from './Operation'
+import { getDocRef} from './Operation'
 import { getDoc, setDoc } from 'firebase/firestore'
 
 const provider = new GoogleAuthProvider()
 
 const addUserToFirestore = async (user) => {
-  //const { id, displayName, email, photoURL } = user;
-  //console.log(user)
-  //console.log(user.user.uid, user.user.displayName, user.user.email, user.user.photoURL)  
-    //const userExist = await getDataById("users", id);
+  
     const docRef = await getDocRef("users", user.user.uid)
     const userStapshop = await getDoc(docRef)
     const userExist = !!userStapshop.data();

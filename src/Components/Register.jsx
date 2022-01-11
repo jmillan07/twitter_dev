@@ -4,21 +4,13 @@ export function Register(){
     
     const [email, handleEmail] = useInput("")
     const [password, handlePassword] = useInput("")
-    const [userState, setUserstate] = useInput(null)
-
-    //console.log(email)
-    //console.log(password)
 
     const logIn = async ()=>{
-        //const user = await singIn(email,password)
-        //setUserstate(user)
+        
     }
     
     const crearUsuario = async()=>{
-       // console.log("pase")
-    //const user = await createUser(email, password)
-    //console.log(user)
-    //setUserstate(user)
+    
     }
 
     return(

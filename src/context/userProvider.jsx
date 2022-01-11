@@ -9,11 +9,10 @@ const UserProvider = ( {children} )=> {
 
     useEffect(async ()=>{
         const unSuscribe = await handleOutChange((user)=>{
-            //console.log("se llamo a la funcion ")
             if(user){
                 ////el usuario esta sign In
                 ///guardar el usuario en un state
-                console.log(user)
+                
                 setUser(user.user)
             }
             else{

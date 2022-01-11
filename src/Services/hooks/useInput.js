@@ -11,15 +11,3 @@ export const useInput = () =>{
     return [input, handleChange, clearInput]
 
 }
-
-// const useInput = (initialvaluer = “”) => {
-//     const [input, setInput] = useState(initialvaluer);
-//     const handleChange = (e) => {
-//       setInput(e.target.value);
-//     };
-//     const clearInput = () => {
-//       setInput (initialvaluer)
-//     }
-//     return [input, handleChange, clearInput];
-//    };
-//   export default useInput;

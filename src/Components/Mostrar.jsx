@@ -1,5 +1,3 @@
-// import {TweeterList} from './Components/TweeterList'
-// import {Tweeter} from './Components/Tweeter'
 import { Tweeter } from "./Twitter/Tweeter"
 import { TweeterList } from "./Twitter/TweeterList"
 
@@ -9,6 +7,3 @@ export default function Mostrar () {
         <TweeterList/>
     </div>  
 }
-
-// <Tweeter/>
-//     <TweeterList/>

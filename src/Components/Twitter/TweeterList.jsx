@@ -1,11 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import { onSnapshot, orderBy, query } from 'firebase/firestore'
-
-//import { getCollectionRef, deleteData, updateData } from '../Services/Operation'
-
 import { getCollectionRef } from '../../Services/Operation'
-
 import { Tweet } from './TwitterListDef.jsx'
 
 export const TweeterList = () =>{
@@ -27,8 +23,8 @@ export const TweeterList = () =>{
     return (
         <div className='containerC'>
             {
-                twelist.map((tweet)=> {
-                    return <Tweet tweet = {tweet}/>
+                twelist.map((tweet,index)=> {
+                    return <Tweet tweet = {tweet} key={index}/>
                 })
             }
         </div>

@@ -1,12 +1,8 @@
 import {db} from '../Services/FirebasesConfig'
-import { doc, getDocs, getDoc,deleteDoc,addDoc, setDoc,updateDoc, onSnapshot, collection } from 'firebase/firestore'
-
-
+import { doc, getDocs, getDoc,deleteDoc,addDoc, setDoc,updateDoc, collection } from 'firebase/firestore'
 
 export const getCollectionRef = (cole)=> collection(db,cole)
-
 export const getDocRef = (colle,id)=> doc(db,colle,id)
-
 
 export const updateData = async (coll, id, data) => {
     const docre = getDocRef(coll, id)
@@ -24,20 +20,16 @@ export const addData = async (coll,data) => {
     return docre
 }
 
-//add data para usuario
+//add data para usuario solicitar
 export const addDataU = async (coll, id ,data) => {
   const docRef = getDocRef(coll, id)
   const user = await getDoc(docRef);
   const userExist = user.data()
-  //console.log(userExist)
   if(!userExist) {
     await setDoc(docRef, { userName: data.displayName,
       email: data.email,
       photo: data.photoURL})
   }
-
-  //const docre = await addDoc(collectionRec,data)
-  //return docre
 }
 
 //get data
@@ -50,14 +42,11 @@ export const getData = async (col) => {
 
 //get Data by ID
 export const getDataById = async (col, id) => {
-  //console.log("estoy pasando por el getdatabyid")
     const docRef = getDocRef(col, id);
     const snapData = await getDoc(docRef);
     const data = snapData.data();
-    //console.log(data)
     return data;
   };
-  
 
 //set data
 export const setData = async (col, data) => {
@@ -72,4 +61,3 @@ export const setDocument = async (col, id, data) => {
     const docSnapshot = await setDoc(docRef, data);
     return docSnapshot;
   };
-
